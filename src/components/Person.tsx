@@ -3,8 +3,9 @@ const Person = ({ name }: { name: { first: string; last: string } }) => {
   return (
     <div>
       <h2>
-        Fullname: {first} {last}
+        Object type props: {first} {last}
       </h2>
+      <hr />
     </div>
   )
 }

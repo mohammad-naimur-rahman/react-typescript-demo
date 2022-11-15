@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className='App'>
+      <h1 className='heading'>React TypeScript Demo</h1>
       <Greet name='Naimur' messageCount={10} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />

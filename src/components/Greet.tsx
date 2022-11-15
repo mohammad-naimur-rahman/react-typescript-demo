@@ -7,10 +7,11 @@ type GreetProps = {
 const Greet = ({ name, messageCount, isLoggedIn }: GreetProps) => {
   return (
     <div>
-      <h3>{isLoggedIn ? 'Logged in' : 'Not logged in'}</h3>
+      <h3>Boolean type props: {isLoggedIn ? 'Logged in' : 'Not logged in'}</h3>
       <h2>
-        Welcome {name}! You have {messageCount} unread messages.
+        String type props: Welcome {name}! You have {messageCount} unread messages.
       </h2>
+      <hr />
     </div>
   )
 }
