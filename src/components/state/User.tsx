@@ -29,6 +29,7 @@ const User = () => {
       </div>
       {user?.name ? <h3>User name is {user?.name}</h3> : <h3>User is not logged in</h3>}
       {user?.email ? <h3>User email is {user?.email}</h3> : null}
+      <hr />
     </div>
   )
 }
