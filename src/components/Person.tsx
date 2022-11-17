@@ -1,4 +1,6 @@
-const Person = ({ name }: { name: { first: string; last: string } }) => {
+import { PersonTypes } from './Person.types'
+
+const Person = ({ name }: PersonTypes) => {
   const { first, last } = name
   return (
     <div>

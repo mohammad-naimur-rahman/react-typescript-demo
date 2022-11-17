@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Button from './components/Button'
+import Container from './components/Container'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
 import Input from './components/Input'
@@ -30,7 +31,7 @@ function App() {
     },
   ]
 
-  const [name, setName] = useState('')
+  const [name, setName] = useState<string>('')
 
   return (
     <div className='App'>
@@ -47,6 +48,7 @@ function App() {
         Event type: Click me to log 1 in the console
       </Button>
       <Input id='input' value={name} label='Name' onChange={e => setName(e.target.value)} />
+      <Container styles={{ color: 'tomato' }} />
     </div>
   )
 }
