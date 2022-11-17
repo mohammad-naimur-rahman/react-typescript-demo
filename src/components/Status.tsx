@@ -13,7 +13,7 @@ export const Status = (props: StatusProps) => {
   }
   return (
     <>
-      <h2>Enum prop types:Status - {message}</h2>
+      <h2>Enum prop types: Status - {message}</h2>
       <hr />
     </>
   )
