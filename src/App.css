@@ -8,5 +8,5 @@
   padding: 10px 50px;
   border-radius: 5px;
   background-color: var(--blue);
-  font-weight: lighter;
+  font-weight: lighter !important;
 }

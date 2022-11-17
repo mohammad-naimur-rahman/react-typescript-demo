@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import './App.css'
+import Button from './components/Button'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
+import Input from './components/Input'
 import Oscar from './components/Oscar'
 import Person from './components/Person'
 import PersonList from './components/PersonList'
@@ -27,6 +30,8 @@ function App() {
     },
   ]
 
+  const [name, setName] = useState('')
+
   return (
     <div className='App'>
       <h1 className='heading'>React TypeScript Demo</h1>
@@ -38,6 +43,10 @@ function App() {
         <Heading>Naimur Rahman</Heading>
       </Oscar>
       <Greet name='Naimur' isLoggedIn={false} />
+      <Button handleClick={(e, id) => console.log('I clicked it, yay!', e, id)}>
+        Event type: Click me to log 1 in the console
+      </Button>
+      <Input id='input' value={name} label='Name' onChange={e => setName(e.target.value)} />
     </div>
   )
 }
