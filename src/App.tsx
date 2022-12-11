@@ -18,6 +18,8 @@ import { Status } from './components/Status'
 import { UserForContext } from './components/context/User'
 import DomRef from './components/ref/DomRef'
 import MutableRef from './components/ref/MutableRef'
+import Private from './components/auth/Private'
+import Profile from './components/auth/Profile'
 
 function App() {
   const personName = {
@@ -66,6 +68,7 @@ function App() {
         <UserForContext />
         <DomRef />
         <MutableRef />
+        <Private isLoggedIn={true} Component={Profile} />
       </div>
     </ThemeContextProvider>
   )
