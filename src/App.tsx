@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Button from './components/Button'
 import Container from './components/Container'
+import { Box } from './components/context/Box'
+import { ThemeContextProvider } from './components/context/ThemeContext'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
 import Input from './components/Input'
@@ -37,25 +39,28 @@ function App() {
   const [name, setName] = useState<string>('')
 
   return (
-    <div className='App'>
-      <h1 className='heading'>React TypeScript Demo</h1>
-      <Greet name='Naimur' messageCount={10} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
-      <Status status='success' />
-      <Oscar>
-        <Heading>Naimur Rahman</Heading>
-      </Oscar>
-      <Greet name='Naimur' isLoggedIn={false} />
-      <Button handleClick={(e, id) => console.log('I clicked it, yay!', e, id)}>
-        Event type: Click me to log 1 in the console
-      </Button>
-      <Input id='input' value={name} label='Name' onChange={e => setName(e.target.value)} />
-      <Container styles={{ color: 'tomato' }} />
-      <LoggedIn />
-      <User />
-      <Counter />
-    </div>
+    <ThemeContextProvider>
+      <div className='App'>
+        <h1 className='heading'>React TypeScript Demo</h1>
+        <Greet name='Naimur' messageCount={10} isLoggedIn={false} />
+        <Person name={personName} />
+        <PersonList names={nameList} />
+        <Status status='success' />
+        <Oscar>
+          <Heading>Naimur Rahman</Heading>
+        </Oscar>
+        <Greet name='Naimur' isLoggedIn={false} />
+        <Button handleClick={(e, id) => console.log('I clicked it, yay!', e, id)}>
+          Event type: Click me to log 1 in the console
+        </Button>
+        <Input id='input' value={name} label='Name' onChange={e => setName(e.target.value)} />
+        <Container styles={{ color: 'tomato' }} />
+        <LoggedIn />
+        <User />
+        <Counter />
+        <Box />
+      </div>
+    </ThemeContextProvider>
   )
 }
 
