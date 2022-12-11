@@ -16,6 +16,8 @@ import LoggedIn from './components/state/LoggedIn'
 import User from './components/state/User'
 import { Status } from './components/Status'
 import { UserForContext } from './components/context/User'
+import DomRef from './components/ref/DomRef'
+import MutableRef from './components/ref/MutableRef'
 
 function App() {
   const personName = {
@@ -62,6 +64,8 @@ function App() {
         <Counter />
         <Box />
         <UserForContext />
+        <DomRef />
+        <MutableRef />
       </div>
     </ThemeContextProvider>
   )
