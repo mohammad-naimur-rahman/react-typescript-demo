@@ -21,6 +21,7 @@ import MutableRef from './components/ref/MutableRef'
 import Private from './components/auth/Private'
 import Profile from './components/auth/Profile'
 import List from './generics/List'
+import RandomNumber from './components/restriction/RandomNumber'
 
 function App() {
   const personName = {
@@ -76,6 +77,7 @@ function App() {
         {/* <List items={['Naimur', 'Rahman', 'Sabila', 'Nur']} onClick={item => console.log(item)} />
         <List items={[1, 2, 3, 4]} onClick={item => console.log(item)} /> */}
         <List items={nameList} onClick={item => console.log(item)} />
+        <RandomNumber value={10} isPositive />
       </div>
     </ThemeContextProvider>
   )

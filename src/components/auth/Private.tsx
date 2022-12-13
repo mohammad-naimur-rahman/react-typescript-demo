@@ -4,9 +4,19 @@ import { ProfileProps } from './Profile'
 
 const Private = ({ isLoggedIn, Component }: { isLoggedIn: boolean; Component: ComponentType<ProfileProps> }) => {
   if (isLoggedIn) {
-    return <Component name='Naimur' />
+    return (
+      <>
+        <Component name='Naimur' />
+        <hr />
+      </>
+    )
   } else {
-    return <Login />
+    return (
+      <>
+        <Login />
+        <hr />
+      </>
+    )
   }
 }
 
