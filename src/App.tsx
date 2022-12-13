@@ -20,9 +20,11 @@ import DomRef from './components/ref/DomRef'
 import MutableRef from './components/ref/MutableRef'
 import Private from './components/auth/Private'
 import Profile from './components/auth/Profile'
-import List from './generics/List'
+import List from './components/generics/List'
 import RandomNumber from './components/restriction/RandomNumber'
 import Toast from './components/templateLiterals/Toast'
+import CustomButton from './components/html/CustomButton'
+import CustomInput from './components/html/CustomInput'
 
 function App() {
   const personName = {
@@ -80,6 +82,8 @@ function App() {
         <List items={nameList} onClick={item => console.log(item)} />
         <RandomNumber value={10} isPositive />
         <Toast position='center-left' />
+        <CustomButton variant='primary'>This is a reusable Buttton</CustomButton>
+        <CustomInput type='text' placeholder='Custom Input' className='form-control my-4' />
       </div>
     </ThemeContextProvider>
   )
