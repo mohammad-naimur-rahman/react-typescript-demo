@@ -4,7 +4,7 @@ import Button from './components/Button'
 import Container from './components/Container'
 import { Box } from './components/context/Box'
 import { ThemeContextProvider } from './components/context/ThemeContext'
-import { UserContextProvider } from './components/context/UserContext'
+//import { UserContextProvider } from './components/context/UserContext'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
 import Input from './components/Input'
@@ -20,6 +20,7 @@ import DomRef from './components/ref/DomRef'
 import MutableRef from './components/ref/MutableRef'
 import Private from './components/auth/Private'
 import Profile from './components/auth/Profile'
+import List from './generics/List'
 
 function App() {
   const personName = {
@@ -29,14 +30,17 @@ function App() {
 
   const nameList = [
     {
+      id: 1,
       first: 'Katrina',
       last: 'Kaif',
     },
     {
+      id: 2,
       first: 'Sabila',
       last: 'Nur',
     },
     {
+      id: 3,
       first: 'Katherine',
       last: 'Langford',
     },
@@ -69,6 +73,9 @@ function App() {
         <DomRef />
         <MutableRef />
         <Private isLoggedIn={true} Component={Profile} />
+        {/* <List items={['Naimur', 'Rahman', 'Sabila', 'Nur']} onClick={item => console.log(item)} />
+        <List items={[1, 2, 3, 4]} onClick={item => console.log(item)} /> */}
+        <List items={nameList} onClick={item => console.log(item)} />
       </div>
     </ThemeContextProvider>
   )

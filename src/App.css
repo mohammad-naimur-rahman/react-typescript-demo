@@ -10,3 +10,7 @@
   background-color: var(--blue);
   font-weight: lighter !important;
 }
+
+li {
+  list-style: none;
+}
